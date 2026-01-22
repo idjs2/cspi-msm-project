@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const env = process.env;
+  env.PUBLIC_URL = env.PUBLIC_URL || "";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <div className="right-bar">
+          <a href="https://accounts.google.com/b/0/AddMailService">Gmail</a>
+          <a href="https://www.google.com/imghp?hl=ko&tab=ri&authuser=0&ogbl">이미지</a>
+          <img src={process.env.PUBLIC_URL + `/assets/erlenmeyer-flask.png`}/>
+          <img src={process.env.PUBLIC_URL + `/assets/dots-menu.png`}/>
+        </div>
       </header>
     </div>
   );
